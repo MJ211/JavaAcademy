@@ -1,0 +1,7 @@
+Triangulation - technika TDD polegająca na balansowaniu między wejściem i wyjściem. Tzn. czasami nie można pobrac wartościu którą chcemy sprawdzić, więc obchodzimy to sprawdzając rezultaty pewnych czynności.
+	Przykład: Testowanie poruszania się postaci po planszy. Nie możemy pobrać współrzędnych bohatera. Możemy pobrać współrzędne rzeczy których bohater "widzi"
+	Test 1: Bohater na starcie nic nie widzi. Liczba widzianych rzeczy: 0
+	Test 2: Bohater porusza się 3x w prawo. Napotyka drzewo. Liczba widzianych rzeczy: 1.
+	etc.
+
+
