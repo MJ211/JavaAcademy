@@ -9,12 +9,14 @@ class MoneyTest {
         assertEquals(Money.franc(10), five.times(2));
         assertEquals(Money.franc(15), five.times(3));
     }
+
     @Test
     public void testMultiplication() {
         Money five = Money.dollar(5);
         assertEquals(Money.dollar(10), five.times(2));
         assertEquals(Money.dollar(15), five.times(3));
     }
+
     @Test
     public void testEquality() {
         assertTrue(Money.dollar(5).equals(Money.dollar(5)));
@@ -27,5 +29,5 @@ class MoneyTest {
         assertEquals("USD", Money.dollar(1).currency());
         assertEquals("CHF", Money.franc(1).currency());
     }
-    
+
 }
