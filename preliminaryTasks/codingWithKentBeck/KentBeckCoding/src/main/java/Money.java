@@ -1,17 +1,10 @@
-public abstract class Money {
+public class Money {
     protected int amount;
     protected String currency;
-    public abstract Money times(int multiplier);
 
     public Money(int amount, String currency) {
         this.amount = amount;
         this.currency = currency;
-    }
-
-    @Override
-    public boolean equals(Object object) {
-        Money dollar = (Money) object;
-        return this.amount == dollar.amount && this.getClass().equals(object.getClass());
     }
     public static Dollar dollar(int amount) {
         return new Dollar(amount, "USD");
@@ -22,4 +15,18 @@ public abstract class Money {
     public String currency() {
         return currency;
     }
+    public Money times(int multiplier) {
+        return new Money(amount * multiplier, currency);
+    }
+
+    @Override
+    public String toString() {
+        return amount + " " + currency;
+    }
+    @Override
+    public boolean equals(Object object) {
+        Money money = (Money) object;
+        return this.amount == money.amount && this.currency.equals(money.currency);
+    }
 }
+
